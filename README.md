@@ -1,6 +1,6 @@
 # PyPlaytest tutorial: Blackjack
 
-This is a basic repository for learning [PyPlaytest](https://docs.google.com/document/d/1RsXewXl0SH-vwHwH6N4I3viaqTZObvFS_-9lfbgY9as/edit).
+This is a basic repository for learning [PyPlaytest](https://github.com/dat-boris/py-playtest).
 
 
 Documentation draft:[Google docs](https://docs.google.com/document/d/1RsXewXl0SH-vwHwH6N4I3viaqTZObvFS_-9lfbgY9as/edit#heading=h.ik94pw9fmrrd)
