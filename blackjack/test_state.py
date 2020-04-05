@@ -1,7 +1,7 @@
 import pytest
 
 from playtest import Visibility
-from playtest.components import Counter
+from playtest.components import Token
 
 from .constants import Param
 from .state import State, PlayerState
@@ -31,3 +31,17 @@ def test_setup(state: State):
         assert isinstance(player_state, PlayerState)
         assert isinstance(player_state.hand, Deck)
         assert len(player_state.hand) == 0
+
+
+@pytest.mark.xfail
+def test_has_betting_pool(state: State):
+    """### Betting pool
+
+    Each player will have a bank, start at 10 dollars,
+    and there will be a better pool
+    """
+    assert isinstance(state.betting_pool, Token)
+    assert state.betting_pool.value == 0
+    for player_state in state.players:
+        assert isinstance(player_state.bank, Token)
+        assert state.betting_pool.value == 11
