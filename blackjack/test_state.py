@@ -37,11 +37,11 @@ def test_setup(state: State):
 def test_has_betting_pool(state: State):
     """### Betting pool
 
-    Each player will have a bank, start at 10 dollars,
-    and there will be a better pool
+    There will be a betting pool of value 0.
+    Each player will have a bank of value 10 dollars.
     """
     assert isinstance(state.betting_pool, Token)
-    assert state.betting_pool.value == 0
+    assert state.betting_pool.amount == 0
     for player_state in state.players:
         assert isinstance(player_state.bank, Token)
-        assert state.betting_pool.value == 11
+        assert state.betting_pool.amount == 10
